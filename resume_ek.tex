@@ -1,0 +1,104 @@
+\documentclass{resume}
+\name{Eric Kim}
+\addressone{1684 Oxford Street}
+\addresstwo{Berkeley, CA 94709}
+\email{eric.kim.cs@gmail.com}
+\phone{805-300-9474}
+\website{http://www.eric-kim.net}
+
+\usepackage{verbatim}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty} %% no page numbers
+
+\begin{component}{Objective}
+To engineer cutting-edge products with usability, efficiency, and scalability in mind, while also leveraging
+the recent massive influx of data toward building better products. \\
+\end{component}
+
+\begin{component}{Education}
+	\school{University of California, Berkeley}{Computer Science}{B.A.}{December 2011}
+\end{component}
+
+\vspace{1.0em}
+
+\begin{component}{Key Skills}
+	\textbf{Technical Skills}\\
+		Programming Languages: Python, C, C++, Java, Javascript, HTML, CSS, php, Scheme, Assembly (x86)\\
+		Environments: UNIX variants, Windows\\
+		Productivity: Version control (svn, git, mercurial), gdb, Wireshark, UNIX toolset
+\end{component}
+
+\vspace{1.0em}
+
+\begin{component}{Experience}
+	\begin{position}{Research Assistant}{May 2011 -- Present}
+	 	{University of California, Berkeley}{Department of Computer Science}
+	{Developed election auditing software, whose scope includes Computer Vision and UI design, which 
+	will be used to enable progressive election audit legislature in states across the US.}
+	\end{position}
+
+	\begin{position}{Teaching Assistant}{May 2010 -- Present}
+		{University of California, Berkeley}{Department of Computer Science}
+	{Taught several key undergraduate Computer Science courses: CS 3L, CS 61A, CS6BL. 
+	 Duties included holding weekly sections, writing exams, grading, 
+	holding office hours, and developing course materials.}
+	\end{position}
+
+	\begin{position}{Significant Projects}{Ongoing}
+		{}{\vspace{-1.0em}}
+	{Projects with significant scope and technical expertise for the purpose of applying concepts, in addition to
+	sharpening programming skills.}
+
+	\begin{itemize}
+		\vspace{-0.5em}\item Built a static analysis tool that, given the source code of a program that
+		processes attacker-controlled input, finds an input that maximizes execution time, effectively
+		creating a Denial-of-Service (DoS) attack vector. (C, Gametime tool)
+		\vspace{-0.5em}\item Built a Python 2.5 compiler targeting the x86 ISA, with the addition of
+		optional strong typing support. (C++, Bison variant, Python)
+		\vspace{-0.5em}\item A symbolic music generator that provides harmonically-correct
+		parts for SATB voices. Framing the problem as a CSP and as a Dynamic Programming problem led to efficient generators.
+		(Python)
+		\vspace{-0.5em}\item Implemented various key low-level aspects of the 
+		educational NachOS operating system, such as demand paging, multi-threading, virtual memory, and 
+		networking.
+		\vspace{-0.5em}\item Built a spam classifier, utilizing the Naive Bayes probabilistic model in order to make
+		learning and inference stages tractable. (Python, numpy)
+		\vspace{-0.5em}\item Implemented several AI algorithms for the game of Pacman, utilizing
+		techniques such as: graph search, adversarial search, and reinforcement learning. (Python)
+	\end{itemize}
+	\end{position}
+\end{component}
+
+\vspace{-1.0em}
+
+\begin{component}{Academic Papers}
+	\begin{itemize}
+		\item[] ``An Analysis of Write-in Marks on Optical Scan Ballots,'' Theron Ji, Eric Kim, Raji Srikantan, Alan Tsai, Arel Cordero, and David Wagner. \emph{EVT/WOTE 2011}, August 2011.
+		\item[] ``The Worst Video You Have Ever Seen: Exacerbating the Computation Time of Systems,'' Eric Kim, Jonathan Kotker, Sunil Pedapudi, Sanjit Seshia, and David Wagner. December 2011.
+	\end{itemize}
+\end{component}
+
+
+\begin{component}{Relevant Coursework}
+	\begin{tabularfw}{l c r}
+	Algorithms & Discrete Math & Data Structures \\
+	Machine Structures & Operating Systems & Artificial Intelligence \\
+	Machine Learning & Compilers & Computer Security
+	\end{tabularfw}
+\end{component}
+
+\begin{comment}
+\begin{component}{Relevant Coursework}
+	\begin{tabularfw}{l c c r}
+	Algorithms & Discrete Math & Data Structures & Machine Structures \\
+	Operating Systems & Artificial Intelligence & Machine Learning \\
+	Compilers & Computer Security
+	\end{tabularfw}
+\end{component}
+\end{comment}
+
+\end{document}
+
