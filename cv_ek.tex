@@ -16,15 +16,15 @@
 \vspace{-0.5em}
 
 \begin{component}{Research Interests}
-Computer vision, machine learning.
+Computer vision, machine learning, medical imaging.
 %I am interested in developing principled methods to
 %analyze image and video streams.
-I am interested in image representation and model-based Vision.
+%I am interested in image representation and model-based Vision.
 %In particular, I would like
 %to develop methods that can scale to the billions of images available on the Internet.
 %This includes unsupervised methods that can take effectively advantage of the large corpus of
 %images without the expensive requirement of high-quality labels.
-Specific applications include: face recognition, image understanding, and 3D reconstruction.
+Specific applications: face recognition, tissue segmentation, visual modeling, and 3D reconstruction.
 \end{component}
 
 \vspace{0.5em}
@@ -32,7 +32,9 @@ Specific applications include: face recognition, image understanding, and 3D rec
 \begin{component}{Education}
     \school{University of California, Los Angeles}{Computer Science}{M.S.}{09/2013 -- 06/2016}
 
-    \hspace{2em} Advisors: Professor Demetri Terzopoulos, Dr. M. Alex O. Vasilescu (Tensor Vision Technologies)
+    \hspace{1em} Advisors: Professor Demetri Terzopoulos, Dr. M. Alex O. Vasilescu (Tensor Vision Technologies)
+
+    \hspace{1em} Thesis: ``A Part-Based, Multiresolution, TensorFaces Approach to Image-Based Facial Verification''
 
 	\school{University of California, Berkeley}{Computer Science}{B.A.}{08/2007 -- 12/2011}
 \end{component}
@@ -46,16 +48,16 @@ Specific applications include: face recognition, image understanding, and 3D rec
         \vspace{-0.5em}\item[] Presented improvements to the OpenCount system,
         which significantly reduce operator effort.
         Our new techniques yield order-of-magnitude speedups compared
-        to the previous system, and enable us to successfully process some
+        to the previous system, and enable us to successfully process
         elections that would not have reasonably feasible without these
-        techniques.
+        improvements.
     \end{itemize}
     
 ``Operator-Assisted Tabulation of Optical Scan Ballots,'' Kai Wang, Eric Kim, Nicholas Carlini, Ivan Motyashov, Daniel Nguyen, David Wagner. \emph{EVT/WOTE 2012}, August 2012.
         \begin{itemize}
-        \vspace{-0.5em}\item[] Designed and developed the OpenCount tool, which allows an operator
+        \vspace{-0.5em}\item[] Designed and developed the OpenCount software, which allows an operator
 to efficiently create vote tallies of scanned voted ballots from an election. This is accomplished via a system 
-that interleaves computer vision algorithms and operator assistance in order to achieve perfect (or near-perfect) accuracy.
+that interleaves computer vision algorithms and operator assistance to achieve perfect (or near-perfect) accuracy.
 Successfully applied the tool on several California pilot audits in 2011. 
         \end{itemize}
 
@@ -80,22 +82,38 @@ Successfully applied the tool on several California pilot audits in 2011.
         {University of California, Los Angeles}{Department of Computer Science}
     \emph{Tensor Vision Technologies}
 
-    {Developed a novel facial verification system within a multilinear framework. Utilized techniques from computer vision, machine learning, and multilinear analysis.}
+    {Developed a novel facial verification system. 
+By analyzing faces in a multiresolution, part-based multilinear framework, we improved verification results by 13\% on the ``Labeled Faces in the Wild'' dataset relative to a previous multilinear approach (79\% overall).
+
+This work matured into my MS thesis, titled: ``A Part-Based, Multiresolution, TensorFaces Approach to Image-Based Facial Verification''.
+Advisors: Professor Demetri Terzopoulos (UCLA), Dr. M. Alex O. Vasilescu (Tensor Vision Technologies).
+}
     \end{position}
 
-    \begin{position}{Programmer}{January 2016 -- Present}{University of California, Los Angeles}{School of Dentistry}
-      Developed a system to perform automatic fiducial marker acquisition on 3D cone-beam computed tomography scans of human subjects for the purpose of 3D cephalometric analysis.
+    \begin{position}{Research Programmer}{January 2016 -- Present}{University of California, Los Angeles}{School of Dentistry}
+      {
+Developed a statistical model of shape and appearance to perform bone contour segmentation of 3D imaging data.
+The algorithm iteratively improves the contour by updating each landmark based on a learned model of local appearance, followed by a global shape constraint update.
+\\
+Applied 3D mesh algorithms to quantitatively determine facial surgery effects on facial structure.
+After achieving mesh correspondence by applying a nonrigid iterative-closest point registration algorithm, I ran statistical tests on pre/post operation facial structure data to determine statistically significant regions of change.
+}
       \end{position}
 
+
     \begin{position}{Research Engineer}{January 2012 -- August 2013}
-        {University of California, Berkeley}{Department of Computer Science}
-    {Designed and developed election auditing software, whose scope includes the application of computer Vision and image processing techniques. Successfully performed several pilot audit programs in various California counties. Future work includes additional pilot audits, as well as improvements to the system itself.}
+        {}{}{}
     \end{position}
-    
+
+\vspace{-3.25em}
+
     \begin{position}{Research Assistant}{August 2010 -- January 2012}
         {University of California, Berkeley}{Department of Computer Science}
-    {}
+    {Designed and developed the election auditing software ``OpenCount''.
+Involved the use of computer vision and image processing techniques: image registration, digit recognition, automatic visual barcode decoding, and ``human-in-the-loop'' processing for efficient data entry.
+Successfully performed several pilot audit programs in several California counties.}
     \end{position}
+    
 \end{component}
 
 \vspace{-1.5em}
@@ -117,37 +135,34 @@ Successfully applied the tool on several California pilot audits in 2011.
 
 \vspace{0.5em}
 
-\begin{component}{Misc.}
-	\begin{position}{Significant Projects}{Ongoing}
-		{}{\vspace{-1.0em}}
-	{Projects with significant scope and technical expertise for the purpose of applying concepts, in addition to
-	sharpening programming skills.}
-
+\begin{component}{Projects}
 	\begin{itemize}
-		\vspace{-0.5em}\item Built an automatic choral music generator. Utilizing artificial intelligence techniques and music theory led to an elegant and extendable framework that consistently outputs pleasing music.
+		\vspace{-0.5em}\item FourVoices: An automatic music generator. Utilizing artificial intelligence and music theory led to an elegant and extendable framework that consistently outputs pleasing music.
+I transformed the problem into a set of constraints and variables, and solved the resulting problem with a general-purpose constraint satisfaction solver.
+The project is hosted on GitHub, where I have also written documentation and tutorials.
 		(Python)
-        \vspace{-0.5em}\item Automatic handwriting recognition. Utilized adaptive spline models to model and recognize handwritten characters. (Matlab)
-        \vspace{-0.5em}\item Maintains a personal website that discusses topics related to vision and learning.
-        \vspace{-0.5em}\item Implemented an efficient barcode decoder
-        for the Interleaved 2-of-5 format. (Python, OpenCV)
-		\vspace{-0.5em}\item Built a Python 2.5 compiler targeting the x86 ISA, with the addition of
-		optional strong typing support. (C++, Bison variant, Python)
-		\vspace{-0.5em}\item Built a spam classifier, utilizing the Naive Bayes probabilistic model in order to make
-		learning and inference stages tractable. (Python, numpy)
-		\vspace{-0.5em}\item Implemented several AI algorithms for the game of Pacman, utilizing
-		techniques such as: graph search, adversarial search, and reinforcement learning. (Python)
+        \vspace{-0.5em}\item Handwriting recognition. Utilized adaptive splines to recognize handwritten characters.
+To recognize a handwritten character, a deformable spline model is fit to the character via an iterative deformation algorithm.
+The algorithm outputs a deformation cost which is used for recognition: the label of the spline model with smallest cost is declared the output label.
+(Matlab)
+        \vspace{-0.5em}\item Efficient barcode decoder
+	        for the Interleaved 2-of-5 format. (Python, OpenCV)
+        %\vspace{-0.5em}\item Maintains a personal website. Topics include: 
+        %computer science, machine learning, computer vision.
+        \vspace{-0.5em}\item Wrote a gentle tutorial to kernel methods as used in machine learning. Title: ``\emph{Everything You Wanted to Know about the Kernel Trick (But Were Too Afraid to Ask)}''. This article is the second search result returned for Google searches of ``kernel trick'', as of 2016.
+		\vspace{-0.5em}\item Python 2.5 compiler targeting the x86 ISA, with the addition of
+		strong typing support. (C++, Python)
 	\end{itemize}
-	\end{position}
 \end{component}
 
-\vspace{-2.0em}
+\vspace{-1.0em}
 
 \begin{component}{Key Skills}
 	\textbf{Technical Skills}\\
 		Programming Languages: Python, Matlab, C, C++, Java, Javascript, HTML, CSS, php, Scheme, Assembly (MIPS, x86\_64)\\
-        Specializations: Face recognition, computer vision, machine learning, nonlinear optimization, data analysis.\\
+        Specializations: Face recognition, computer vision, medical imaging, machine learning, nonlinear optimization, automatic landmark detection, data analysis.\\
 %		Environments: UNIX, Windows\\
-		Other: OpenCV, vlfeat, numpy, scipy, Django, OpenGL \\
+		Libraries: OpenCV, vlfeat, numpy, scipy, Django, OpenGL \\
 		Productivity: Version control (svn, git, mercurial), GDB, Wireshark, UNIX toolset, LaTeX
 \end{component}
 
