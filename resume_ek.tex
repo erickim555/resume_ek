@@ -7,6 +7,7 @@
 \website{http://www.eric-kim.net}
 
 \usepackage{verbatim}
+\geometry{margin=0.4in}
 
 \begin{document}
 
@@ -15,54 +16,68 @@
 
 \vspace{-0.5em}
 
-\begin{component}{Objective}
-To develop innovative products with particular focus in utilizing visual data to enable exciting applications.
-Interests: computer vision, face recognition, machine learning, analytics.\\
-\end{component}
+%% \begin{component}{Objective}
+%% To develop innovative products with particular focus in utilizing visual data to enable exciting applications.
+%% Interests: computer vision, face recognition, machine learning, analytics.\\
+%% \end{component}
 
 \vspace{-0.5em}
 
 \begin{component}{Education}
-    \school{University of California, Los Angeles}{Computer Science}{M.S.}{2016}
+    \school{University of California, Los Angeles}{Computer Science}{M.S.}{2013 -- 2016}
 
-    \hspace{2em} Advisors: Professor Demetri Terzopoulos, Dr. M. Alex O. Vasilescu (Tensor Vision Technologies)
+    \hspace{1em} Advisors: Professor Demetri Terzopoulos, Dr. M. Alex O. Vasilescu (Tensor Vision Technologies)
+
+    \hspace{1em} Thesis: ``\emph{A Part-Based, Multiresolution, TensorFaces Approach to Image-Based Facial Verification}''
     
-	\school{University of California, Berkeley}{Computer Science}{B.A.}{2011}
+	\school{University of California, Berkeley}{Computer Science}{B.A.}{2007 -- 2011}
 \end{component}
 
-\vspace{0.5em}
+\vspace{-0.25em}
 
 \begin{component}{Key Skills}
-		Languages: Python, Matlab, Java, C, C++, Javascript, HTML, CSS, PHP, Scheme, x86\_64.\\
-        Specializations: Computer vision, face recognition, machine learning, nonlinear optimization.\\
+		Languages: Python, Matlab, Java, C, C++, Javascript, HTML, CSS, PHP, Scheme, x86\_64, MIPS.\\
+        Specializations: Computer vision, face recognition, machine learning, medical imaging, nonlinear optimization.\\
 %		Environments: Unix, Windows. \\
-		Productivity: Unix toolset, version control (svn, git, mercurial), Django, gdb, Wireshark, LaTeX.
+		Libraries: OpenCV, vlfeat, numpy, scipy, OpenGL \\
+		Productivity: Unix toolset, version control (svn, git, mercurial), gdb, Wireshark, LaTeX.
 \end{component}
 
-\vspace{0.5em}
+\vspace{-0.25em}
 
 \begin{component}{Experience}
 	\begin{position}{Graduate Researcher/Intern}{September 2014 -- June 2016}{University of California, Los Angeles}{Department of Computer Science}
 	\emph{Tensor Vision Technologies}
 
-		Developed a novel facial verification system within a multilinear framework, and validated on several public datasets.
-Utilized techniques from computer vision, machine learning, and multilinear analysis.
+    {Analyzed faces in a multiresolution, part-based multilinear framework, and improved verification results by 13\% on the ``Labeled Faces in the Wild'' dataset relative to previous multilinear work (79\% overall).
+This work matured into my MS thesis.
+}
 	\end{position}
 
-    \begin{position}{Programmer}{January 2016 -- Present}{University of California, Los Angeles}{School of Dentistry}
-      Developed a system to perform automatic fiducial marker acquisition on 3D cone-beam computed tomography scans of human subjects for the purpose of 3D cephalometric analysis.
-      Extended the active shape model to perform automatic landmark acquisition.
+\vspace{-0.25em}
+
+    \begin{position}{Research Programmer}{January 2016 -- Present}{University of California, Los Angeles}{School of Dentistry}
+{
+Developed a statistical model of shape and appearance to perform bone contour segmentation of 3D imaging data.
+The algorithm iteratively improves the contour by updating each landmark based on a learned model of local appearance, followed by a global shape constraint update.
+\\
+Applied 3D mesh algorithms to quantitatively determine facial surgery effects on facial structure.
+After achieving mesh correspondence by applying a nonrigid iterative closest point registration algorithm, I ran statistical tests on pre/post operation facial structure data to determine statistically significant regions of change.
+}
       \end{position}
+
+\vspace{-0.25em}
 
 	\begin{position}{Research Assistant}{May 2011 -- August 2013}
 	 	{University of California, Berkeley}{Department of Computer Science}
-	{Spearheaded the development of an open-source election auditing software,
-     utilizing image processing and computer vision techniques. 
+	{Spearheaded the development of an open-source election auditing software: OpenCount.
+     Utilized computer vision for automatic ballot tallying: image registration, digit recognition, and barcode decoding.
      Successfully performed
          several pilot audit programs in California counties.
-     Developed web applications to ease the image annotation process of
-     computer vision datsets.}
+}
 	\end{position}
+
+\vspace{-0.25em}
 
 	\begin{position}{Teaching Assistant}{May 2010 -- June 2016}
 		{University of California, Berkeley}{Department of Computer Science}
@@ -73,17 +88,23 @@ Utilized techniques from computer vision, machine learning, and multilinear anal
 	\end{position}
 \end{component}
 
-\vspace{-0.5em}
+\vspace{-1em}
 
-\begin{component}{Projects}
+\begin{component}{Additional Projects}
 	\begin{itemize}
-		\vspace{-0.5em}\item \emph{FourVoices}: An automatic music generator. Utilizing artificial intelligence and music theory led to an elegant and extendable framework that consistently outputs pleasing music.
+		\vspace{-0.5em}\item \emph{FourVoices}: An automatic music generator.
+%Utilizing artificial intelligence and music theory led to an elegant and extendable framework that consistently outputs pleasing music.
+Using principles of music theory, I transformed the music generation problem into a set of constraints and variables, which I then solve with a general-purpose constraint satisfaction solver.
+Hosted on GitHub, the project features a wiki and illustrated tutorials on usage.
 		(Python)
-        \vspace{-0.5em}\item Handwriting recognition. Utilized adaptive splines to recognize handwritten characters. (Matlab)
+%        \vspace{-0.5em}\item Handwriting recognition. Utilized adaptive splines to recognize handwritten characters. (Matlab)
+        \vspace{-0.5em}\item Handwriting recognition. Handwriting is modeled as instantiations of deformable spline models.
+To recognize a handwritten character, a deformable spline model is fit to the character via an iterative deformation algorithm.
+%The algorithm outputs a deformation cost which is used for recognition: the label of the spline model with smallest cost is declared the output label.
+(Matlab)
         \vspace{-0.5em}\item Efficient barcode decoder
 	        for the Interleaved 2-of-5 format. (Python, OpenCV)
-        \vspace{-0.5em}\item Maintains a personal website. Topics include: 
-        computer science, machine learning, computer vision.
+        \vspace{-0.5em}\item Wrote a gentle tutorial to kernel methods as used in machine learning. Title: ``\emph{Everything You Wanted to Know about the Kernel Trick (But Were Too Afraid to Ask)}''. This article is the second search result returned for Google searches of ``kernel trick'', as of 2016.
 		\vspace{-0.5em}\item Python 2.5 compiler targeting the x86 ISA, with the addition of
 		strong typing support. (C++, Python)
 		%\vspace{-0.5em}\item Implemented various key low-level aspects of the 
@@ -95,7 +116,7 @@ Utilized techniques from computer vision, machine learning, and multilinear anal
 	\end{itemize}
 \end{component}
 
-\vspace{-0.5em}
+\vspace{-0.75em}
 
 \begin{component}{Academic Papers}
 \vspace{-0.5em}
