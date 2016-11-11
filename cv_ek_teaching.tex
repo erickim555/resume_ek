@@ -1,0 +1,202 @@
+\documentclass{resume}
+\name{Eric Kim}
+\addressone{417 1/2 Veteran Avenue}
+\addresstwo{Los Angeles, CA 90024}
+\email{ekim@cs.ucla.edu}
+\phone{805-300-9474}
+\website{http://www.eric-kim.net}
+
+\usepackage{verbatim}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty} %% no page numbers
+
+\vspace{-0.5em}
+
+\begin{component}{Research Interests}
+Computer vision, machine learning.
+%I am interested in developing principled methods to
+%analyze image and video streams.
+I am interested in image representation and model-based Vision.
+%In particular, I would like
+%to develop methods that can scale to the billions of images available on the Internet.
+%This includes unsupervised methods that can take effectively advantage of the large corpus of
+%images without the expensive requirement of high-quality labels.
+Specific applications include: face recognition, image understanding.
+\end{component}
+
+\vspace{0.5em}
+
+\begin{component}{Education}
+    \school{University of California, Los Angeles}{Computer Science}{M.S.}{09/2013 -- 2016}
+
+    \hspace{2em} Advisor: \emph{Professor Demetri Terzopoulos}
+
+    \hspace{2em} Advisor: \emph{M. Alex O. Vasilescu}
+    
+	\school{University of California, Berkeley}{Computer Science}{B.A.}{08/2007 -- 12/2011}
+\end{component}
+
+\vspace{0.5em}
+
+\begin{component}{Teaching Experience}
+  \begin{position}{Teaching Assistant (PIC 10A: Introduction to Programming)}{Winter 2016, Spring 2016}
+    {University of California, Los Angeles}{Program in Computing}
+    {Course Topics: Procedural problem solving; program design and development; basic data types; control structures; functions; arrays and pointers; introduction to classes. Duties included: holding weekly discussion sections/office hours, preparing course material, and grading exams. Language: C++.}
+  \end{position}
+
+  \begin{position}{Teaching Assistant (CS 33: Introduction to Computer Organization)}{Spring 2015}
+    {University of California, Los Angeles}{Department of Computer Science}
+    {Course Topics: architecture, assembly language, and operating system fundamentals. Number systems, machine language, and assembly language. Procedure calls, stacks, interrupts, and traps. Assemblers, linkers, and loaders. Operating systems concepts: processes and process management, input/output (I/O) programming, memory management, file systems. Multithreading. Language(s): C, x86\_64.}
+  \end{position}
+
+    \textbf{Teaching Assistant (CS 61A: Structure and Interpretation of Computer Programs)}
+\vspace{-0.7em}
+\begin{flushright}Summer 2012, Fall 2011, Spring 2011, Fall 2010\end{flushright}
+\vspace{-0.7em}
+        \textit{University of California, Berkeley \hfill Department of Computer Science}\\
+    {Course Topics: Introduction to computer science. Functional programming, recursion, abstract data types, object-oriented programming, programming paradigms, orders of growth, interpreters, streams, declarative programming, parallelism. Language(s): Scheme, Python.}
+\\
+% unfort, the below doesn't fit correctly
+  %% \begin{position}{Teaching Assistant (CS 61A: Structure and Interpretation of Computer Programs)}{\\  \hfill Summer 2012, Fall 2011, Spring 2011, Fall 2010}
+  %%   {University of California, Berkeley}{Department of Computer Science}
+  %%   {Course Topics: Introduction to computer science. Functional programming, recursion, abstract data types, objected-oriented programming, programming paradigms, orders of growth, interpreters, streams, declarative programming, parallelism. Language(s): Scheme, Python.}
+  %% \end{position}
+
+  \begin{position}{Teaching Assistant (CS 61BL: Data Structures and Algorithms)}{Summer 2010}
+    {University of California, Berkeley}{Department of Computer Science}
+    {Course Topics: Object-oriented programming, abstract classes/interfaces, data structures (linked lists, arrays, stacks, queues, trees, hash tables, heaps, priority queues, graphs), generic programming, Java libraries, asymptotics, graph traversal algorithms, shortest path algorithms, sorting. Language: Java.}
+  \end{position}
+
+  \begin{position}{Teaching Assistant (CS 3L: Introduction to Symbolic Programming)}{Summer 2011}
+    {University of California, Berkeley}{Department of Computer Science}
+    {Course Topics: Basic programming principles, control flow, higher-order functions, functional programming, recursion, list programming, tree recursion, vectors, complexity. Language: Scheme.}
+  \end{position}
+
+\end{component}
+
+\begin{component}{Publications}
+\vspace{0.5em}
+``Improved Support for Machine-Assisted Ballot-Level Audits,'' Eric Kim, Nicholas Carlini, Andrew Chang, George Yiu, Kai Wang, David Wagner. \emph{EVT/WOTE 2013}, August 2013.
+    \begin{itemize}
+        \vspace{-0.5em}\item[] Presented improvements to the OpenCount system,
+        which significantly reduce operator effort.
+        Our new techniques yield order-of-magnitude speedups compared
+        to the previous system, and enable us to successfully process some
+        elections that would not have reasonably feasible without these
+        techniques.
+    \end{itemize}
+    
+``Operator-Assisted Tabulation of Optical Scan Ballots,'' Kai Wang, Eric Kim, Nicholas Carlini, Ivan Motyashov, Daniel Nguyen, David Wagner. \emph{EVT/WOTE 2012}, August 2012.
+        \begin{itemize}
+        \vspace{-0.5em}\item[] Designed and developed the OpenCount tool, which allows an operator
+to efficiently create vote tallies of scanned voted ballots from an election. This is accomplished via a system 
+that interleaves computer vision algorithms and operator assistance in order to achieve perfect (or near-perfect) accuracy.
+Successfully applied the tool on several California pilot audits in 2011. 
+        \end{itemize}
+
+``An Analysis of Write-in Marks on Optical Scan Ballots,'' Theron Ji, Eric Kim, Raji Srikantan, Alan Tsai, Arel Cordero, and David Wagner. \emph{EVT/WOTE 2011}, August 2011.
+	\begin{itemize}
+	\vspace{-0.5em}\item[] Developed a system to achieve automatic recognition of write-in marks on marked voter ballots. Evaluated the system on
+				       a large-scale election in Leon County, Florida, and studied the kinds of write-in marks that are seen in practice.
+	\end{itemize}
+\end{component}
+
+\vspace{-0.5em}
+
+\begin{component}{Posters}
+
+``OpenCount: Operator-Assisted Tabulation of Optical Scan Ballots'', Eric Kim, Nicholas Carlini, Andrew Chang, George Yiu, Zongheng Yang, Kai Wang, David Wagner. \emph{NIST Future of Voting Systems Symposium}, February 2013. 
+\end{component}
+
+\vspace{0.5em}
+
+\begin{component}{Research Experience}
+    \begin{position}{Graduate Researcher}{September 2014 -- Present}
+        {University of California, Los Angeles}{Department of Computer Science}
+    \emph{Tensor Vision Technologies}
+
+    {Worked on performing face recognition within a multilinear framework.}
+    \end{position}
+
+    \begin{position}{Research Engineer}{January 2012 -- August 2013}
+        {University of California, Berkeley}{Department of Computer Science}
+    {Designed and developed election auditing software, whose scope includes the application of computer Vision and image processing techniques. Successfully performed several pilot audit programs in various California counties. Future work includes additional pilot audits, as well as improvements to the system itself.}
+    \end{position}
+    
+    \begin{position}{Research Assistant}{August 2010 -- January 2012}
+        {University of California, Berkeley}{Department of Computer Science}
+    {}
+    \end{position}
+\end{component}
+
+\vspace{-1.5em}
+
+
+\vspace{0.5em}
+
+\begin{component}{Misc.}
+	\begin{position}{Significant Projects}{Ongoing}
+		{}{\vspace{-1.0em}}
+	{Projects with significant scope and technical expertise for the purpose of applying concepts, in addition to
+	sharpening programming skills.}
+
+	\begin{itemize}
+        \vspace{-0.5em}\item Maintains a personal website that discusses topics related to vision and learning.
+        \vspace{-0.5em}\item Implemented an efficient barcode decoder
+        for the Interleaved 2-of-5 format. (Python, OpenCV)
+		\vspace{-0.5em}\item Built a Python 2.5 compiler targeting the x86 ISA, with the addition of
+		optional strong typing support. (C++, Bison variant, Python)
+		\vspace{-0.5em}\item A symbolic music generator that provides harmonically-correct
+		parts for SATB voices. Casting the problem as a constraint
+        satisfaction problem led to a flexible formulation.
+		(Python)
+		\vspace{-0.5em}\item Built a spam classifier, utilizing the Naive Bayes probabilistic model in order to make
+		learning and inference stages tractable. (Python, numpy)
+		\vspace{-0.5em}\item Implemented several AI algorithms for the game of Pacman, utilizing
+		techniques such as: graph search, adversarial search, and reinforcement learning. (Python)
+	\end{itemize}
+	\end{position}
+\end{component}
+
+\vspace{-2.0em}
+
+\begin{component}{Key Skills}
+	\textbf{Technical Skills}\\
+		Programming Languages: Python, Matlab, C, C++, Java, Javascript, HTML, CSS, php, Scheme, Assembly (MIPS, x86)\\
+		Environments: UNIX, Windows\\
+		Other: OpenCV, vlfeat, numpy, scipy, Django, OpenGL \\
+		Productivity: Version control (svn, git, mercurial), GDB, Wireshark, UNIX toolset, LaTeX
+\end{component}
+
+\begin{component}{Graduate Coursework}
+\begin{tabularfw}{l c r}
+Machine Perception & Linear Programming & Convex Optimization \\
+Reasoning with Partial Beliefs & Large Scale Optimization & Applied Probability \\
+&Visual Modeling \\
+\end{tabularfw}
+\end{component}
+
+\begin{component}{Undergraduate Coursework}
+	\begin{tabularfw}{l c r}
+	Algorithms & Discrete Math & Data Structures \\
+	Machine Structures & Operating Systems & Artificial Intelligence \\
+	Machine Learning & Compilers & Computer Security \\
+    Linear Algebra & Computer Networks & Computer Graphics \\
+	\end{tabularfw}
+\end{component}
+
+\begin{comment}
+\begin{component}{Relevant Coursework}
+	\begin{tabularfw}{l c c r}
+	Algorithms & Discrete Math & Data Structures & Machine Structures \\
+	Operating Systems & Artificial Intelligence & Machine Learning \\
+	Compilers & Computer Security
+	\end{tabularfw}
+\end{component}
+\end{comment}
+
+\end{document}
+
