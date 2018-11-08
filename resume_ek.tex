@@ -1,10 +1,14 @@
 \documentclass{resume}
+\usepackage{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
+\usepackage{url}
+
 \name{Eric Kim}
 \addressone{248 Guerrero Street, Apt 202}
-\addresstwo{San Francisco, CA 94013}
+\addresstwo{San Francisco, CA 94103}
 \email{eric.kim.cs@gmail.com}
 \phone{805-300-9474}
-\website{http://www.eric-kim.net}
+\website{\href{http://www.eric-kim.net}{http://www.eric-kim.net}}
 
 \usepackage{verbatim}
 \geometry{margin=0.4in}
@@ -36,49 +40,52 @@
 \vspace{-0.25em}
 
 \begin{component}{Key Skills}
-		Languages: Python, Matlab, Java, C, C++, Javascript, HTML, CSS, PHP, Scheme, x86\_64, MIPS.\\
-        Specializations: Computer vision, face recognition, machine learning, medical imaging, nonlinear optimization, reconstruction.\\
+		Languages: Python, C/C++, Scala, Matlab, Java, Javascript, HTML, CSS, PHP, Scheme, x86\_64, MIPS.\\
+        Specializations: Computer vision, deep learning, face recognition, machine learning, medical imaging.\\
 %		Environments: Unix, Windows. \\
-		Libraries: OpenCV, vlfeat, numpy, scipy, OpenGL \\
-		Productivity: Unix toolset, version control (svn, git, mercurial), gdb, Wireshark, LaTeX.
+		Libraries: Caffe, Caffe2, Tensorflow, pytorch, numpy, scipy, OpenCV, Spark \\
+%		Productivity: Unix toolset, version control (svn, git, mercurial), gdb, LaTeX.
 \end{component}
 
-\vspace{-0.25em}
+\vspace{-1.5em}
 
 \begin{component}{Experience}
-  \begin{position}{Software Engineer}{January 2017 -- Present}{Pinterest, Inc.}{Discovery (Visual Search)}
-    {Applied computer vision and machine learning domain expertise to enhance visual search user experience.}
+  \vspace{0.25em}
+  \begin{position}{Software Engineer}{January 2017 -- Present}{Pinterest, Inc.}{Discovery, Visual Search}
+    {As lead of the object detection group, I apply the state of the art in computer vision to gain a rich understanding of the visual contents of each Pin. Implemented and launched a product feature ``Lens your Look'' that unifies text search with visual search to recommend outfits, and wrote a \href{https://medium.com/@Pinterest_Engineering/building-lens-your-look-unifying-text-and-camera-search-1b2f3ef4e393}{blog post} describing the technical work.
+      Designed and implemented a scalable, efficient Spark feature extraction pipeline that extracts visual signals on the billions of Pinterest images within hours. }
   \end{position}
   
 	\begin{position}{Graduate Researcher, Intern}{September 2014 -- June 2016}{University of California, Los Angeles}{Department of Computer Science}
 	\emph{Tensor Vision Technologies}
 
     {Analyzed faces in a multiresolution, part-based multilinear framework, and improved face verification results by 13\% on the ``Labeled Faces in the Wild'' dataset relative to previous multilinear work (79\% overall).
-This project became my MS thesis.
+%This project became my MS thesis.
 }
 	\end{position}
 
 \vspace{-0.25em}
 
-    \begin{position}{Research Programmer}{January 2016 -- Present}{University of California, Los Angeles}{School of Dentistry}
+    \begin{position}{Research Programmer}{January 2016 -- December 2016}{University of California, Los Angeles}{School of Dentistry}
 {
 Developed a statistical model of shape and appearance to perform bone contour segmentation of 3D medical imaging data.
 %The algorithm iteratively improves the contour by updating each landmark based on a learned model of local appearance and global shape constraints.
-Enhanced accuracy of the model by extending the appearance model and the search algorithm to work well on 3D data.
+%Enhanced accuracy of the model by extending the appearance model and the search algorithm to work well on 3D data.
 \\
-Applied 3D mesh algorithms to quantitatively determine facial surgery effects on facial structure.
-After achieving mesh correspondence by applying a nonrigid iterative closest point registration algorithm, I ran statistical tests on pre/post operation facial structure data to determine statistically significant regions of change.
+Quantitatively determined statistically significant facial surgery effects on facial structure.
+%After achieving mesh correspondence via a nonrigid iterative closest point registration algorithm, I ran statistical tests on pre/post operation facial structure data to determine statistically significant regions of change.
+This work led to a publication.
 }
       \end{position}
 
-\vspace{-0.25em}
+\vspace{-0.75em}
 
 	\begin{position}{Research Assistant}{May 2011 -- August 2013}
 	 	{University of California, Berkeley}{Department of Computer Science}
-	{Spearheaded the development of an open-source election auditing software: OpenCount.
-     Utilized computer vision for automatic ballot tallying: image registration, digit recognition, and barcode decoding.
+	{Led the development of an open-source election auditing software: OpenCount.
+     Utilized computer vision for automatic ballot tallying: image registration, digit recognition, barcode decoding.
      Successfully performed
-         several pilot audit programs in California counties.
+         pilot audits in California counties.
 }
 	\end{position}
 
@@ -89,29 +96,33 @@ After achieving mesh correspondence by applying a nonrigid iterative closest poi
     \emph{University of California, Los Angeles}
 
 	{Taught undergraduate computer science courses, spanning: Python, Scheme, Java, C, C++, and x86\_64.
-	 Duties included holding sections, developing course materials, grading, and supervising office hours.}
+	  Duties included holding sections, developing course materials, grading, and supervising office hours.
+      \href{http://eric-kim.net/eric-kim-net/teaching.html}{Additional teaching details here}.
+    }
 	\end{position}
 \end{component}
 
-\vspace{-1em}
+\vspace{-1.0em}
 
 \begin{component}{Additional Projects}
 	\begin{itemize}
-		\vspace{-0.5em}\item \emph{FourVoices}: An automatic music generator.
+		\vspace{-0.5em}\item \href{https://github.com/erickim555/FourVoices}{\emph{FourVoices}}: An automatic music generator.
 %Utilizing artificial intelligence and music theory led to an elegant and extendable framework that consistently outputs pleasing music.
-Using principles of music theory, I transformed the music generation problem into a set of constraints and variables, which I then solve with a general-purpose constraint satisfaction solver.
-Hosted on GitHub, the project features a wiki and illustrated tutorials on usage.
+Using principles of music theory, I transformed the music generation problem into a set of constraints and variables, which I solve with a general-purpose constraint satisfaction solver.
+Hosted on GitHub, the project features a wiki and tutorials on usage.
 		(Python)
 %        \vspace{-0.5em}\item Handwriting recognition. Utilized adaptive splines to recognize handwritten characters. (Matlab)
-        \vspace{-0.5em}\item Handwriting recognition.
-To recognize a handwritten character, an adaptive deformable spline model is fit to the character via an iterative deformation algorithm that integrates both apperance and shape information.
+        \vspace{-0.5em}\item \href{http://eric-kim.net/cs269\_fa2014/index.html}{Handwriting recognition}:
+        Implemented an adaptive deformable spline model to recognize handwritten characters using appearance and shape information.
+        %To recognize a handwritten character, an adaptive deformable spline model is fit to the character via an iterative deformation algorithm that integrates both apperance and shape information.
 %The algorithm outputs a deformation cost which is used for recognition: the label of the spline model with smallest cost is declared the output label.
 (Matlab)
-        \vspace{-0.5em}\item Efficient barcode decoder
-	        for the Interleaved 2-of-5 format. (Python, OpenCV)
-        \vspace{-0.5em}\item Wrote a tutorial on kernel methods as used in machine learning: ``\emph{Everything You Wanted to Know about the Kernel Trick (But Were Too Afraid to Ask)}''. This article is the second Google search result for ``kernel trick'', as of 2016.
-		\vspace{-0.5em}\item Python 2.5 compiler targeting the x86 ISA, with the addition of
-		strong typing support. (C++, Python)
+%        \vspace{-0.5em}\item Efficient barcode decoder
+%	        for the Interleaved 2-of-5 format. (Python, OpenCV)
+            \vspace{-0.5em}\item Wrote a popular tutorial on kernel methods as used in machine learning: \href{http://eric-kim.net/eric-kim-net/posts/1/kernel\_trick\_blog\_ekim\_12\_20\_2017.pdf}{``\emph{Everything You Wanted to Know about the Kernel Trick (But Were Too Afraid to Ask)}''}.
+            %This article is the second Google search result for ``kernel trick'', as of 2016.
+		%\vspace{-0.5em}\item Python 2.5 compiler targeting the x86 ISA, with the addition of
+		%strong typing support. (C++, Python)
 		%\vspace{-0.5em}\item Implemented various key low-level aspects of the 
 		%educational NachOS operating system, such as demand paging, multi-threading, virtual memory, and 
 		%networking.
@@ -124,8 +135,10 @@ To recognize a handwritten character, an adaptive deformable spline model is fit
 \vspace{-0.75em}
 
 \begin{component}{Academic Papers}
-\vspace{-0.5em}
-	\begin{itemize}
+\vspace{-0.25em}
+\begin{itemize}
+\item[] ``Three-dimensional soft tissue analysis of the face following micro-implant-supported maxillary skeletal expansion,'' Sara Abedini, Islam Elkenawy, Eric Kim, Won Moon. \emph{Progress in Orthodontics}, 2018. \emph{(Accepted, publication pending)}
+  \vspace{-0.5em}
         \item[] ``Improved Support for Machine-Assisted Ballot-Level Audits,'' Eric Kim, Nicholas Carlini, Andrew Chang, George Yiu, Kai Wang, David Wagner. \emph{EVT/WOTE 2013}, August 2013.
 \vspace{-0.5em}
         \item[] ``Operator-Assisted Tabulation of Optical Scan Ballots,'' Kai Wang, Eric Kim, Nicholas Carlini, Ivan Motyashov, Daniel Nguyen, David Wagner. \emph{EVT/WOTE 2012}, August 2012.

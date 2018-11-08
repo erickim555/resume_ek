@@ -1,17 +1,23 @@
 \documentclass{resume}
+\usepackage{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
+\usepackage{url}
+
 \name{Eric Kim}
 \addressone{248 Guerrero Street, Apt 202}
 \addresstwo{San Francisco, CA 94103}
 \email{eric.kim.cs@gmail.com}
 \phone{805-300-9474}
-\website{http://www.eric-kim.net}
+\website{\url{http://www.eric-kim.net}}
 
 \usepackage{verbatim}
+\geometry{margin=0.6in}
 
 \begin{document}
 
 \maketitle
 \thispagestyle{empty} %% no page numbers
+\pagenumbering{gobble}
 
 \vspace{-0.5em}
 
@@ -24,7 +30,7 @@ Computer vision, machine learning, medical imaging.
 %to develop methods that can scale to the billions of images available on the Internet.
 %This includes unsupervised methods that can take effectively advantage of the large corpus of
 %images without the expensive requirement of high-quality labels.
-Specific applications: face recognition, tissue segmentation, visual modeling, and 3D reconstruction.
+Specific applications: object detection, face recognition, tissue segmentation, visual modeling, and 3D reconstruction.
 \end{component}
 
 \vspace{0.5em}
@@ -42,6 +48,17 @@ Specific applications: face recognition, tissue segmentation, visual modeling, a
 \vspace{0.5em}
 
 \begin{component}{Publications}
+  \vspace{0.5em}
+  ``Three-dimensional soft tissue analysis of the face following micro-implant-supported maxillary skeletal expansion,'' Sara Abedini, Islam Elkenawy, Eric Kim, Won Moon. \emph{Progress in Orthodontics}, 2018. \emph{(Accepted, publication pending)}
+  \begin{itemize}
+    \vspace{-0.5em}\item[] Developed a statistical model of shape and appearance to perform bone contour segmentation of 3D medical imaging data.
+%The algorithm iteratively improves the contour by updating each landmark based on a learned model of local appearance and global shape constraints.
+Enhanced accuracy of the model by extending the appearance model and the search algorithm to work well on 3D data.
+%Quantitatively determined statistically significant facial surgery effects on facial structure.
+After achieving mesh correspondence via a nonrigid iterative closest point registration algorithm, ran statistical tests on pre/post operation facial structure data to determine statistically significant regions of change.
+  \end{itemize}
+  
+  
 \vspace{0.5em}
 ``Improved Support for Machine-Assisted Ballot-Level Audits,'' Eric Kim, Nicholas Carlini, Andrew Chang, George Yiu, Kai Wang, David Wagner. \emph{EVT/WOTE 2013}, August 2013.
     \begin{itemize}
@@ -79,7 +96,8 @@ Successfully applied the tool on several California pilot audits in 2011.
 
 \begin{component}{Experience}
     \begin{position}{Software Engineer}{January 2017 -- Present}{Pinterest, Inc.}{Discovery (Visual Search)}
-    {Applied computer vision and machine learning domain expertise to enhance visual search user experience.}
+    {As lead of the object detection group, I apply the state of the art in computer vision to gain a rich understanding of the visual contents of each Pin. Implemented and launched a product feature ``Lens your Look'' that unifies text search with visual search to recommend outfits, and wrote a \href{https://medium.com/@Pinterest_Engineering/building-lens-your-look-unifying-text-and-camera-search-1b2f3ef4e393}{blog post} describing the technical work.
+      Designed and implemented a scalable, efficient Spark feature extraction pipeline that extracts visual signals on the billions of Pinterest images within hours.}
   \end{position}
   
     \begin{position}{Graduate Researcher}{September 2014 -- June 2016}
@@ -94,14 +112,14 @@ Advisors: Professor Demetri Terzopoulos (UCLA), Dr. M. Alex O. Vasilescu (Tensor
 }
     \end{position}
 
-    \begin{position}{Research Programmer}{January 2016 -- Present}{University of California, Los Angeles}{School of Dentistry}
+    \begin{position}{Research Programmer}{January 2016 -- December 2016}{University of California, Los Angeles}{School of Dentistry}
       {
 Developed a statistical model of shape and appearance to perform bone contour segmentation of 3D medical imaging data.
-The algorithm iteratively improves the contour by updating each landmark based on a learned model of local appearance, followed by a global shape constraint update.
+%The algorithm iteratively improves the contour by updating each landmark based on a learned model of local appearance, followed by a global shape constraint update.
 Enhanced accuracy of the model by extending the appearance model and the search algorithm to work well on 3D data.
-\\
-Applied 3D mesh algorithms to quantitatively determine facial surgery effects on facial structure.
-After achieving mesh correspondence by applying a nonrigid iterative closest point registration algorithm, I ran statistical tests on pre/post operation facial structure data to determine statistically significant regions of change.
+%Applied 3D mesh algorithms to quantitatively determine facial surgery effects on facial structure.
+%After achieving mesh correspondence by applying a nonrigid iterative closest point registration algorithm, I ran statistical tests on pre/post operation facial structure data to determine statistically significant regions of change.
+This work led to a publication.
 }
       \end{position}
 
@@ -135,18 +153,19 @@ Successfully performed several pilot audit programs in several California counti
     \textbf{Teaching Assistant (PIC 10A)} \hfill January 2016 -- March 2016 \\
     \textbf{Teaching Assistant (PIC 10A)} \hfill March 2016 -- June 2016 \\
         \textit{University of California, Los Angeles \hfill Department of Computer Science}\\
-    Taught several undergraduate computer science courses. Duties included holding weekly sections, writing and grading exams, holding office hours, and developing course material.
+        Taught several undergraduate computer science courses. Duties included holding weekly sections, writing and grading exams, holding office hours, and developing course material.
+        \href{http://eric-kim.net/eric-kim-net/teaching.html}{Additional teaching details here}.
 \end{component}
 
 \vspace{0.5em}
 
 \begin{component}{Projects}
 	\begin{itemize}
-		\vspace{-0.5em}\item FourVoices: An automatic music generator. Utilizing artificial intelligence and music theory led to an elegant and extendable framework that consistently outputs pleasing music.
-I transformed the problem into a set of constraints and variables, and solved the resulting problem with a general-purpose constraint satisfaction solver.
-The project is hosted on GitHub, where I have also written documentation and tutorials.
+	  \vspace{-0.5em}\item \href{https://github.com/erickim555/FourVoices}{FourVoices}: An automatic music generator.
+Using principles of music theory, I transformed the music generation problem into a set of constraints and variables, which I solve with a general-purpose constraint satisfaction solver.
+Hosted on GitHub, the project features a wiki and tutorials on usage.
 		(Python)
-        \vspace{-0.5em}\item Handwriting recognition. Utilized adaptive splines to recognize handwritten characters.
+        \vspace{-0.5em}\item \href{http://eric-kim.net/cs269\_fa2014/index.html}{Handwriting recognition}: Utilized adaptive splines to recognize handwritten characters.
 To recognize a handwritten character, a deformable spline model is fit to the character via an iterative deformation algorithm.
 The algorithm outputs a deformation cost which is used for recognition: the label of the spline model with smallest cost is declared the output label.
 (Matlab)
@@ -154,9 +173,10 @@ The algorithm outputs a deformation cost which is used for recognition: the labe
 	        for the Interleaved 2-of-5 format. (Python, OpenCV)
         %\vspace{-0.5em}\item Maintains a personal website. Topics include: 
         %computer science, machine learning, computer vision.
-        \vspace{-0.5em}\item Wrote a gentle tutorial to kernel methods as used in machine learning. Title: ``\emph{Everything You Wanted to Know about the Kernel Trick (But Were Too Afraid to Ask)}''. This article is the second search result returned for Google searches of ``kernel trick'', as of 2016.
-		\vspace{-0.5em}\item Python 2.5 compiler targeting the x86 ISA, with the addition of
-		strong typing support. (C++, Python)
+            \vspace{-0.5em}\item Wrote a popular tutorial to kernel methods as used in machine learning: \href{http://eric-kim.net/eric-kim-net/posts/1/kernel\_trick\_blog\_ekim\_12\_20\_2017.pdf}{``\emph{Everything You Wanted to Know about the Kernel Trick (But Were Too Afraid to Ask)}''}.
+            %This article is the second search result returned for Google searches of ``kernel trick'', as of 2016.
+		%\vspace{-0.5em}\item Python 2.5 compiler targeting the x86 ISA, with the addition of
+		%strong typing support. (C++, Python)
 	\end{itemize}
 \end{component}
 
@@ -164,11 +184,11 @@ The algorithm outputs a deformation cost which is used for recognition: the labe
 
 \begin{component}{Key Skills}
 	\textbf{Technical Skills}\\
-		Programming Languages: Python, Matlab, C, C++, Java, Javascript, HTML, CSS, php, Scheme, Assembly (MIPS, x86\_64)\\
-        Specializations: Face recognition, computer vision, medical imaging, machine learning, nonlinear optimization, automatic landmark detection, data analysis.\\
+		Programming Languages: Python, C/C++, Matlab, Java, Scala, Javascript, HTML, CSS, php, Scheme, Assembly (MIPS, x86\_64)\\
+        Specializations: Deep learning, computer vision, object detection, image classification, face recognition, medical imaging, machine learning, nonlinear optimization, automatic landmark detection, data analysis.\\
 %		Environments: UNIX, Windows\\
-		Libraries: OpenCV, vlfeat, numpy, scipy, OpenGL \\
-		Productivity: Version control (svn, git, mercurial), GDB, Wireshark, UNIX toolset, LaTeX
+		Libraries: Caffe, Caffe2, Tensorflow, pytorch, OpenCV, numpy, scipy, Spark \\
+		Productivity: Version control (svn, git, mercurial), UNIX toolset, LaTeX
 \end{component}
 
 \begin{component}{Graduate Coursework}
