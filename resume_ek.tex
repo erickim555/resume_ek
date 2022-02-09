@@ -4,11 +4,9 @@
 \usepackage{url}
 
 \name{Eric Kim}
-\addressone{248 Guerrero Street, Apt 202}
-\addresstwo{San Francisco, CA 94103}
+\addresstwo{Orange, CA}
 \email{eric.kim.cs@gmail.com}
-\phone{805-300-9474}
-\website{\href{http://www.eric-kim.net}{http://www.eric-kim.net}}
+\website{\href{https://www.eric-kim.net}{https://www.eric-kim.net}}
 
 \usepackage{verbatim}
 \geometry{margin=0.4in}
@@ -20,10 +18,9 @@
 
 \vspace{-0.5em}
 
-%% \begin{component}{Objective}
-%% To develop innovative products with particular focus in utilizing visual data to enable exciting applications.
-%% Interests: computer vision, face recognition, machine learning, analytics.\\
-%% \end{component}
+\begin{component}{Interests}
+I am a machine-learning engineer with expertise in: computer vision, visual search, graph neural networks, ML serving systems.
+\end{component}
 
 \vspace{-0.5em}
 
@@ -40,10 +37,10 @@
 \vspace{-0.25em}
 
 \begin{component}{Key Skills}
-		Languages: Python, C/C++, Scala, Matlab, Java, Javascript, HTML, CSS, PHP, Scheme, x86\_64, MIPS.\\
-        Specializations: Computer vision, deep learning, face recognition, machine learning, medical imaging.\\
+		Languages: Python, C++, Scala, Java, Matlab, x86\_64\\
+        %Specializations: machine learning, deep learning, computer vision, recommendation systems. \\
 %		Environments: Unix, Windows. \\
-		Libraries: Caffe, Caffe2, Tensorflow, pytorch, numpy, scipy, OpenCV, Spark \\
+		Libraries: pytorch, Caffe, Caffe2, Tensorflow, numpy, scipy, OpenCV, Spark \\
 %		Productivity: Unix toolset, version control (svn, git, mercurial), gdb, LaTeX.
 \end{component}
 
@@ -51,11 +48,30 @@
 
 \begin{component}{Experience}
   \vspace{0.25em}
-  \begin{position}{Software Engineer}{January 2017 -- Present}{Pinterest, Inc.}{Discovery, Visual Search}
-    {As lead of the object detection group, I apply the state of the art in computer vision to extract a rich visual understanding of Pins. Implemented and launched a product feature ``Lens your Look'' that unifies text search with visual search to recommend outfits, and wrote a \href{https://medium.com/@Pinterest_Engineering/building-lens-your-look-unifying-text-and-camera-search-1b2f3ef4e393}{blog post} describing the technical work.
-      Designed and implemented a scalable, efficient Spark feature extraction pipeline that extracts visual signals on the billions of Pinterest images within hours. }
+  \begin{position}{Software Engineer}{January 2017 -- Present}{Pinterest, Inc.}{Advanced Technologies Group}
+    {Backend machine learning engineer with strong generalist skills.
+    Projects include:
+
+    \textbf{\emph{Object detection lead}}. Served as the primary owner of the company's object detection tech stack. Trained new detection models that led to increases in offline and online engagement metrics. (Caffe2, pytorch, C++)
+
+    \textbf{\emph{DNN serving system optimizations}}. Improved detection inference throughput by implementing a batch vectorization technique that reduced DNN feature extraction workflow costs by 3-4x. (C++, Nvidia GPUs)
+
+    \textbf{Graph neural network infrastructure}. Designed and prototyped model training infrastructure to scale up training to richer graphs with billions of nodes and edges. (pytorch, C++, Spark)
+
+    \textbf{\emph{``Lens your Look''}}. Implemented and launched a product feature ``Lens your Look'' that unifies text search with visual search to recommend fashion outfits (\href{https://medium.com/@Pinterest_Engineering/building-lens-your-look-unifying-text-and-camera-search-1b2f3ef4e393}{blog post}) (python).
+
+    \textbf{\emph{C++ guild}}. Leads a C++ ``guild'', a volunteer group that maintains the health of the company's C++ build system. Duties include: improving build pipeline health, fixing build issues, migrations. (C++, jenkins, thrift)
+
+    \textbf{\emph{Mentorship}}. I have mentored three computer vision PhD interns, and jointly published research papers on our team's work.
+    }
   \end{position}
-  
+
+\vspace{-1.0em}
+
+  \begin{position}{Volunteer Technical Alumni Mentor}{March 2019 -- August 2021}{Hackbright Academy}{}
+  {Held weekly office hours, performed mock technical interviews, and provided technical mentorship.}
+  \end{position}
+
 	\begin{position}{Graduate Researcher, Intern}{September 2014 -- June 2016}{University of California, Los Angeles}{Department of Computer Science}
 	\emph{Tensor Vision Technologies}
 
@@ -82,7 +98,7 @@ This work led to a publication.
 
 	\begin{position}{Research Assistant}{May 2011 -- August 2013}
 	 	{University of California, Berkeley}{Department of Computer Science}
-	{Led the development of an open-source election auditing software: OpenCount.
+	{Led the development of an open-source election auditing software: \href{https://github.com/FreeAndFair/OpenCount}{OpenCount}.
      Utilized computer vision for automatic ballot tallying: image registration, digit recognition, barcode decoding.
      Successfully performed
          pilot audits in California counties.
@@ -95,8 +111,8 @@ This work led to a publication.
 		{University of California, Berkeley}{Department of Computer Science}
     \emph{University of California, Los Angeles}
 
-	{Taught undergraduate computer science courses, spanning: Python, Scheme, Java, C, C++, and x86\_64.
-	  Duties included holding sections, developing course materials, grading, and supervising office hours.
+	{Taught undergraduate computer science courses: Python, Scheme, Java, C/C++, x86\_64.
+	  %Duties included holding sections, developing course materials, grading, and supervising office hours.
       \href{http://eric-kim.net/eric-kim-net/teaching.html}{Additional teaching details here}.
     }
 	\end{position}
@@ -137,6 +153,14 @@ Hosted on GitHub, the project features a wiki and tutorials on usage.
 \begin{component}{Academic Papers}
 \vspace{-0.25em}
 \begin{itemize}
+\item[] ``\href{https://arxiv.org/abs/2012.09958}{Toward Transformer-Based Object Detection},'' Josh Beal, Eric Kim, Eric Tzeng, Dong Huk Park, Andrew Zhai, Dmitry Kislyuk. \emph{arXiv 2020}.
+\vspace{-0.5em}
+\item[] ``Bootstrapping Complete The Look at Pinterest,'' Eileen Li, Eric Kim, Andrew Zhai, Josh Beal, Kunlong Gu. \emph{KDD 2020}.
+\vspace{-1.0em}
+\item[] ``Shop The Look: Building a Large Scale Visual Shopping System at Pinterest,'' Raymond Shiau, Hao-Yu Wu, Eric Kim, Yue Li Du, Anqi Guo, Zhiyuan Zhang, Eileen Li, Kunlong Gu, Charles Rosenberg, Andrew Zhai. \emph{KDD 2020}.
+\vspace{-0.5em}
+\item[] ``Complete the Look: Scene-based Complementary Product Recommendation,'' Wang-Cheng Kang, Eric Kim, Jure Leskovec, Charles Rosenberg, Julian McAuley. \emph{CVPR 2019}.
+\vspace{-0.5em}
 \item[] ``Three-dimensional soft tissue analysis of the face following micro-implant-supported maxillary skeletal expansion,'' Sara Abedini, Islam Elkenawy, Eric Kim, Won Moon. \emph{Progress in Orthodontics}, 2018. \emph{(Accepted, publication pending)}
   \vspace{-0.5em}
         \item[] ``Improved Support for Machine-Assisted Ballot-Level Audits,'' Eric Kim, Nicholas Carlini, Andrew Chang, George Yiu, Kai Wang, David Wagner. \emph{EVT/WOTE 2013}, August 2013.
